@@ -1,0 +1,25 @@
+#D-2
+
+import math
+
+# 長方形のクラスを定義
+class Rectangle:
+    def __init__(self, height, width):
+        self.height = height
+        self.width = width
+
+    def area(self):
+        area_value = self.height * self.width
+        return round(area_value, 2)
+
+    def diagonal(self):
+        diagonal_value = math.sqrt(self.height ** 2 + self.width ** 2)
+        return round(diagonal_value, 2)
+
+rectangle1 = Rectangle(height=5, width=6)
+print("{:.2f}".format(rectangle1.area()))
+print(rectangle1.diagonal())
+
+rectangle2 = Rectangle(height=3, width=3)
+print("{:.2f}".format(rectangle2.area()))
+print(rectangle2.diagonal())
